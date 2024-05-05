@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(cors(
     {
-        origin:["https://sachin-suthar-portfolio.vercel.app/"],
+        origin:["https://sachin-suthar-portfolio.vercel.app"],
         methods:["POST","GET"],
         credentials:true
     }
