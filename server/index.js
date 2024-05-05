@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(cors(
     {
-        origin:["https://deploy-mern-1whq.vercel.app"],
+        origin:["https://frontend-portfolio-tawny.vercel.app"],
         methods:["POST","GET"],
         credentials:true
     }
@@ -60,6 +60,10 @@ app.post("/",async (req,res)=>{
 
     
 });
+
+app.get("/",(req,res)=>{
+    res.send("HELLO ");
+})
 
 
 app.listen(8080,()=>{
