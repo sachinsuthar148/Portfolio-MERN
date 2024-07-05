@@ -56,10 +56,21 @@ app.post("/",async (req,res)=>{
         console.log(err);
         res.status(500).json({ message: "Internal Server Error" });
       }
-    
-
-    
+        
 });
+
+app.get("/admin",async (req,res)=>{  
+    try {
+        const results = await PortfolioData.find({});
+        res.json(results);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error fetching results' });
+      }
+        
+});
+
+
 
 app.get("/",(req,res)=>{
     res.send("HELLO ");
